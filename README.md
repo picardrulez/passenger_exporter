@@ -1,0 +1,1 @@
+[![passenger-exporter Build and Test](https://github.com/picardrulez/passenger_exporter/actions/workflows/go.yml/badge.svg)](https://github.com/picardrulez/passenger_exporter/actions/workflows/go.yml)
