@@ -136,14 +136,14 @@ func oldgetXML() {
 	log.Info("xmlValues:")
 	fmt.Printf("%+v", passengerInfo)
 	log.Info("printing passenger_version:")
-	fmt.Printf(passengerInfo.Passenger_version)
+	fmt.Printf("%+v", passengerInfo.Passenger_version)
 }
 
 func getXML() XMLinfo {
 	cmd := exec.Command(EXECCOMMAND, EXECOPTIONS)
 	output, err := cmd.CombinedOutput()
 	if err != nil {
-		log.Fatal("cmd failed with %s\n", err)
+		log.Fatal(fmt.Sprintf("cmd failed with %s\n", err))
 	}
 	var passengerInfo XMLinfo
 	reader := bytes.NewReader([]byte(output))
